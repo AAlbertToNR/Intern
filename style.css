@@ -1,0 +1,166 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Roboto;
+}
+
+a {
+	text-decoration: none;
+}
+body {
+	position: relative;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.background-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('./img/Background.jpg');
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+#cards {
+	display: flex;
+	flex-direction: column;
+
+	gap: 30px;
+}
+
+.card {
+	box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+	height: 350px;
+	border-radius: 5px;
+	backdrop-filter: blur(1px);
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	> div {
+		width: 380px;
+		margin-top: 40px;
+		background-color: rgba(255, 255, 255, 0.1);
+		border-radius: 5px;
+		backdrop-filter: blur(2px);
+		&:nth-child(2) {
+			margin-top: 0px;
+			margin-bottom: 40px;
+			background-color: rgba(255, 255, 255, 0);
+		}
+	}
+}
+
+.INPUT {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	margin-top: 50px;
+	margin-bottom: 35px;
+}
+
+input {
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, 0.2);
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 20px;
+	border: 2px solid black;
+	outline: none;
+	box-shadow: 6px 4px 17px -10px rgba(34, 60, 80, 0.2);
+}
+
+#clear {
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+	backdrop-filter: blur(5px);
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 6px 4px 17px -10px rgba(34, 60, 80, 0.2);
+	cursor: pointer;
+	transition: all ease 1s;
+}
+
+/* Стили для экранов с шириной до 767px */
+@media only screen and (max-width: 767px) {
+	.card {
+		margin: 0px 40px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1230px) {
+	.card {
+		margin: 0px 20px;
+	}
+}
+
+/* CSS */
+.hidden {
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+.visible {
+	opacity: 1;
+}
+
+/* in Card */
+
+.card h2 {
+	margin-top: 10px;
+	color: rgb(216, 216, 216);
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: 0.3px;
+}
+.card__div1 {
+	justify-content: center;
+	display: flex;
+	gap: 5px;
+}
+.card h3 {
+	color: rgb(216, 216, 216);
+	font-size: 20px;
+}
+
+.card__title {
+	margin-top: 10px;
+	> div {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		h3 {
+			font-size: 20px;
+		}
+	}
+}
+
+.card__contact {
+	display: flex;
+	flex-direction: column;
+	gap: auto;
+	padding: 20px;
+	> div {
+		width: 100%;
+		height: 60px;
+		border-radius: 5px;
+		> h2 {
+			font-size: 20px;
+		}
+		> h4 {
+			color: rgb(216, 216, 216);
+		}
+	}
+}
